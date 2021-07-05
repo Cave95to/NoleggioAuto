@@ -15,6 +15,7 @@ public class Simulator {
 	// Parametri di simulazione
 	private int NC ; // number of cars
 	private Duration T_IN ; // intervallo di tempo tra clienti
+	
 	private LocalTime oraApertura = LocalTime.of(8, 0);
 	private LocalTime oraChiusura = LocalTime.of(20, 0);
 	

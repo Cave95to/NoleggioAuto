@@ -4,17 +4,17 @@ import java.time.LocalTime;
 
 public class Event implements Comparable<Event>{
 	
-	public enum EventType {
-		NUOVO_CLIENTE,
+	public enum EventType { // evento ha solo questi 2 tipi, PUBLIC per vederla con simulatore
+		NUOVO_CLIENTE,     // sono costanti numeriche 0,1
 		RITORNO_AUTO
 	}
 	
-	private LocalTime time ;
-	private EventType type ;
+	private LocalTime time ; // quando avviene evento
+	private EventType type ; // ha un tipo che definiamo sopra
 	
-	@Override
+	@Override // definisco come avverrà il confronto tra gli eventi
 	public int compareTo(Event other) {
-		return this.time.compareTo(other.time) ;
+		return this.time.compareTo(other.time) ; // per tempo CRESCENTE, il tempo + basso indica priorita + alta
 	}
 
 	public Event(LocalTime time, EventType type) {

@@ -9,11 +9,14 @@ public class TestSimulator {
 	public static void main(String args[]) {
 		Simulator sim = new Simulator();
 		
+		// imposto parametri
 		sim.setNumCars(15) ;
 		sim.setClientFrequency(Duration.of(10, ChronoUnit.MINUTES)) ;
 		
+		// runno simulatore
 		sim.run() ;
 		
+		// ottengo output
 		int totClients = sim.getTotClients() ;
 		int dissatisfied = sim.getDissatisfied() ;
 		
